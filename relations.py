@@ -71,4 +71,6 @@ def isPartialOrder(L, n):
 		return True
 	return False
 	
-
+	    	
+				
+		
