@@ -20,6 +20,12 @@ def isReflexive(L, n):
 			return False
 	return True
 	
+def isAsymmetric(L):
+	for x in L:
+		if (x[0] != x[1]) and ([x[1],x[0]] in L):
+			return False
+	 return True
+
 def isSymmetric(L):
 	for x in L:
 		if ([x[1], x[0]] not in L):
@@ -54,5 +60,15 @@ def TransClosure(L):
 	while(not isTransitive(result)):
 		result.extend(computeComposition(result, L))
 	return result
+	
+def isEquivalent(L, n):
+	if (isSymmetric(L, n)) and (isReflexive(L)) and (isTransitive(L)):
+		return True
+	return False
+	
+def isPartialOrder(L, n):
+	if (isAsymmetric(L, n)) and (isReflexive(L)) and (isTransitive(L)):
+		return True
+	return False
 	
 
