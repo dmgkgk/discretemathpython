@@ -71,6 +71,14 @@ def isPartialOrder(L, n):
 		return True
 	return False
 	
+def EquivalenceRelation(X):
+	result = []
+	for x in X:
+		for a in x:
+			for b in x:	
+				result.append([a,b])
+	return result 
+
 	    	
 				
 		
