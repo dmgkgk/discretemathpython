@@ -79,6 +79,6 @@ def EquivalenceRelation(X):
 				result.append([a,b])
 	return result 
 
-	    	
+EquivalenceRelation([[1,2,3],[4,5],[6]])	
 				
 		
