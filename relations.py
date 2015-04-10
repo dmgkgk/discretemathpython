@@ -79,6 +79,20 @@ def EquivalenceRelation(X):
 				result.append([a,b])
 	return result 
 
-EquivalenceRelation([[1,2,3],[4,5],[6]])	
-				
-		
+def EquivalenceClass(L):
+	result = []
+	for l in L:
+        found = False
+        for r in result:
+        	if (l[0] in r) or (l[1] in r):
+                found = True
+                	if (l[0] not in r):
+                		r.append(l[0])
+            if (l[1] not in r):
+                r.append(l[1])
+        if (found == False):
+            if (l[0] <> l[1]):
+                result.append([l[0], l[1]])
+            else:
+                result.append([l[0]])
+    return result
